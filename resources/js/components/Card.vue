@@ -6,7 +6,7 @@
             </div>
 
             <!-- Custom Filters -->
-            <div v-for="filters in this.filterRows">
+            <div v-for="(filters, index) in this.filterRows" :key="index">
                 <div class="float-left nova-big-filter-col">
                     <component
                             v-if="filters[0]"
@@ -77,9 +77,7 @@
 </template>
 
 <script>
-    import { Filterable, InteractsWithQueryString } from 'laravel-nova'
     export default {
-        mixins: [ Filterable, InteractsWithQueryString ],
         props: {
             card: {
                 filterMenuTitle: String,
