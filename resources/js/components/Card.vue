@@ -80,7 +80,7 @@
     import {default as InteractsWithQueryString} from 'InteractsWithQueryString';
     import {default as Filterable} from 'Filterable';
     export default {
-        mixins: [ Filterable, InteractsWithQueryString ],
+        mixins: [ InteractsWithQueryString, Filterable ],
         props: {
             card: {
                 filterMenuTitle: String,
