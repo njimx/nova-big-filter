@@ -77,7 +77,8 @@
 </template>
 
 <script>
-    import { Filterable, InteractsWithQueryString } from 'laravel-nova'
+    import {default as InteractsWithQueryString} from 'InteractsWithQueryString';
+    import {default as Filterable} from 'Filterable';
     export default {
         mixins: [ Filterable, InteractsWithQueryString ],
         props: {
@@ -153,6 +154,6 @@
                     return [ this.filters ]
                 }
             }
-        },
+        }
     }
 </script>
