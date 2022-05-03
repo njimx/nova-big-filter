@@ -77,7 +77,9 @@
 </template>
 
 <script>
+    import { Filterable, InteractsWithQueryString } from 'laravel-nova'
     export default {
+        mixins: [ Filterable, InteractsWithQueryString ],
         props: {
             card: {
                 filterMenuTitle: String,
