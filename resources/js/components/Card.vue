@@ -6,8 +6,8 @@
             </div>
 
             <!-- Custom Filters -->
-            <div v-for="(filters, index) in this.filterRows" :key="index">
-                <div class="float-left nova-big-filter-col">
+            <div v-for="(filters, index) in this.filterRows" :key="index" class="flex">
+                <div class="nova-big-filter-col">
                     <component
                             v-if="filters[0]"
                             :resource-name="resourceName"
@@ -18,7 +18,7 @@
                             @change="filterChanged"
                     />
                 </div>
-                <div class="float-left nova-big-filter-col">
+                <div class="nova-big-filter-col">
                     <component
                             v-if="filters[1]"
                             :resource-name="resourceName"
@@ -29,7 +29,7 @@
                             @change="filterChanged"
                     />
                 </div>
-                <div class="float-left nova-big-filter-col">
+                <div class="nova-big-filter-col">
                     <component
                             v-if="filters[2]"
                             :resource-name="resourceName"
